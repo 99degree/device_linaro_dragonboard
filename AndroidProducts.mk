@@ -16,8 +16,10 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/rb5_mini.mk \
     $(LOCAL_DIR)/sm8450_mini.mk \
     $(LOCAL_DIR)/linaro_swr.mk \
+    $(LOCAL_DIR)/qrd8650.mk \
 
 COMMON_LUNCH_CHOICES := \
     db845c-userdebug \
     rb5-userdebug \
+    qrd8650-userdebug \
 

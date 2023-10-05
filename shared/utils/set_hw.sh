@@ -6,7 +6,12 @@
 HW=`/vendor/bin/cat /proc/device-tree/compatible | /vendor/bin/grep rb5`
 
 if [ -z "${HW}" ]; then
-    setprop vendor.hw db845c
+    HW=`/vendor/bin/cat /proc/device-tree/compatible | /vendor/bin/grep sm8650-qrd`
+    if [ -z "${HW}" ]; then
+    	setprop vendor.hw db845c
+    else
+    	setprop vendor.hw qrd8650
+    fi
 else
     setprop vendor.hw rb5
 fi
